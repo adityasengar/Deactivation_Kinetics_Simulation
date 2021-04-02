@@ -8,6 +8,7 @@ def run_simulation():
     t_span = (0, 1000)
     t_eval = np.linspace(0, 1000, 500)
     
+    print("Running ODE solver...")
     solution = solve_ivp(
         fun=lambda t, y: ode_system(t, y, DEFAULT_RATES, STOICHIOMETRIC_MATRIX),
         t_span=t_span,
