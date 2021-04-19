@@ -19,6 +19,8 @@ def run_simulation():
     import pandas as pd
     results = pd.DataFrame(solution.y.T, columns=SPECIES)
     results["time"] = solution.t
+    results.to_csv("results.csv", index=False)
+    print("Results saved to results.csv")
     return results
 
 if __name__ == "__main__":
