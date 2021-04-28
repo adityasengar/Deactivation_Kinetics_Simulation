@@ -4,7 +4,9 @@ from src.constants import SPECIES,  DEFAULT_RATES, DEFAULT_INITIAL_CONDITIONS
 from src.matrix import STOICHIOMETRIC_MATRIX
 from src.model import ode_system
 
-def run_simulation():
+def from src.plotting import plot_results
+    results = run_simulation()
+    plot_results(results, ["C+", "iC4+", "Cn="]):
     t_span = (0, 1000)
     t_eval = np.linspace(0, 1000, 500)
     
@@ -24,4 +26,6 @@ def run_simulation():
     return results
 
 if __name__ == "__main__":
-    run_simulation()
+    from src.plotting import plot_results
+    results = run_simulation()
+    plot_results(results, ["C+", "iC4+", "Cn="])
