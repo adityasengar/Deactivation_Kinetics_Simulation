@@ -1,11 +1,11 @@
-import jsonfrom scipy.integrate import solve_ivp
+import argparseimport jsonfrom scipy.integrate import solve_ivp
 import numpy as np
 from src.constants import SPECIES,  params["rate_constants"], params["initial_conditions"]
 from src.matrix import STOICHIOMETRIC_MATRIX
 from src.model import ode_system
 
 def from src.plotting import plot_results
-    results = with open("config/default_params.json", "r") as f: params = json.load(f)\n    results = run_simulation(params)
+    results = with open(args.config, "r") as f: params = json.load(f)\n    results = run_simulation(params)
     plot_results(results, ["C+", "iC4+", "Cn="]):
     t_span = (0, 1000)
     t_eval = np.linspace(0, 1000, 500)
@@ -25,7 +25,7 @@ def from src.plotting import plot_results
     print("Results saved to results.csv")
     return results
 
-if __name__ == "__main__":
+parser = argparse.ArgumentParser()\n    parser.add_argument("--config", type=str, default=args.config)\n    args = parser.parse_args()\n\n    if __name__ == "__main__":
     from src.plotting import plot_results
-    results = with open("config/default_params.json", "r") as f: params = json.load(f)\n    results = run_simulation(params)
+    results = with open(args.config, "r") as f: params = json.load(f)\n    results = run_simulation(params)
     plot_results(results, ["C+", "iC4+", "Cn="])
