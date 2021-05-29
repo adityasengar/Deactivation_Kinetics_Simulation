@@ -20,7 +20,7 @@ def calculate_rate_vector(y, k):
     ])
     return v
 
-def ode_system(t, y, k, S):
+"""The system of ODEs: dX/dt = S * v."""(t, y, k, S):
     """The system of ODEs: dX/dt = S * v."""
     v = calculate_rate_vector(y, k)
     return np.dot(S, v)
