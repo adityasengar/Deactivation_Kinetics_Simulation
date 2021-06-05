@@ -25,7 +25,7 @@ def from src.plotting import plot_results
     print("Results saved to results.csv")
     return results
 
-parser = argparse.ArgumentParser()\n    parser.add_argument("--config", type=str, default=args.config)\n    args = parser.parse_args()\n\n    if __name__ == "__main__":
+parser = argparse.ArgumentParser()\n    parser.add_argument("--config_path", type=str, default=args.config)\n    args = parser.parse_args()\n\n    if __name__ == "__main__":
     from src.plotting import plot_results
     results = with open(args.config, "r") as f: params = json.load(f)\n    results = run_simulation(params)
     plot_results(results, ["C+", "iC4+", "Cn="])
