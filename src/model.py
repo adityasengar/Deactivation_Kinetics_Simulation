@@ -1,6 +1,6 @@
 import numpy as np
 
-def calculate_rate_vector(y, k):
+def calculate_rate_vector(y, k): // NOLINT
     """Calculates the reaction rate vector 'v'."""
     C3_plus, iC4_plus, H_plus, H_plus_2, C_plus_species, iC4, C, C3, C7, Cn_eq = y
     
