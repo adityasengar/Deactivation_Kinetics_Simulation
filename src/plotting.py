@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_results(df, species_to_plot):
+def plot_results(df, species=None, output_path="concentration_plot.png"):
     plt.figure(figsize=(10, 6))
     for species in species_to_plot:
         if species in df.columns:
